@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="demoApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.angularjs.org/1.5.2/angular.min.js"></script>
+    <script src="dist/component.js"></script>
+    <script src="demo/index.js"></script>
+    <link rel="stylesheet" href="dist/component.css">
+  </head>
+  <body ng-controller="DemoController">
+    <h1>Like box</h1>
+    <like-box></like-box>
+    <p>
+      isLiked: {{currentState.isLiked}}<br>
+      isDisliked: {{currentState.isDisliked}}
+    </p>
+    <p>
+      Look in console for events.
+    </p>
+    <p>
+      Events:
+      <ul><li>ftv-likebox-update: On update like box, get new state</li></ul>
+    </p>
+  </body>
+</html>

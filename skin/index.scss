@@ -1,0 +1,91 @@
+.likeBox {
+    position: relative;
+    text-align: center;
+    margin-top: -3px;
+    margin-right: -2px;
+
+    &--mobile {
+        display: none;
+    }
+
+    &__like {
+        margin-right: 15px;
+    }
+
+    &__dislike {
+        margin-left: 15px;
+    }
+
+    &__button {
+        background: none;
+        border: none;
+        transition: opacity 100ms ease-in;
+        padding: 0;
+
+        &:focus {
+            outline: none;
+            border: none;
+        }
+
+        svg {
+            width: $like-box-width;
+            height: $like-box-height;
+        }
+
+        &--active {
+
+            path {
+                stroke: $like-box-color-shape-active;
+            }
+            circle {
+                fill: $like-box-color-shape-active;
+            }
+
+            .back {
+                fill: $like-box-color-active;
+                stroke: $like-box-color-active;
+            }
+        }
+
+        &--disabled {
+            path {
+                stroke: $like-box-disabled-color;
+            }
+            circle {
+                fill: $like-box-disabled-color;
+            }
+        }
+
+        path {
+            transition: stroke 100ms ease-in;
+        }
+        circle {
+            transition: fill 100ms ease-in;
+        }
+    }
+
+    &--disabled:after {
+        background: $like-box-disabled-color;
+    }
+
+    &__text {
+        font-family: $font-family-second;
+        text-transform: uppercase;
+        line-height: 1em;
+        display: block;
+        text-align: center;
+        color: $like-box-text-color;
+        margin-top: 5px;
+
+        &--mobile {
+            font-family: $font-family-second;
+            @include font-size($like-box-size-mobile-text);
+            display: none;
+            text-transform: none;
+        }
+
+        &--disabled {
+            color: $like-box-disabled-color;
+        }
+    }
+}

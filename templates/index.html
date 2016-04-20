@@ -1,0 +1,16 @@
+<div class="likeBox" >
+    <button class="likeBox__like likeBox__button"
+            ng-click="like()"
+            ng-class="{ 'likeBox__button--active': isLiked()}">
+        <div ng-include="'/likeBox/like.svg.html'"></div>
+    </button>
+    <button class="likeBox__dislike likeBox__button"
+            ng-click="dislike()"
+            ng-class="{ 'likeBox__button--active': isDisliked()}"
+            >
+        <div ng-include="'/likeBox/dislike.svg.html'"></div>
+    </button>
+    <span class="likeBox__text">
+        Do you like ?
+    </span>
+</div>
