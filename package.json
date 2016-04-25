@@ -1,7 +1,7 @@
 {
-  "name": "ftv-angular-speaker",
+  "name": "ftv-angular-likebox",
   "version": "1.0.0",
-  "description": "France TV - Speaker",
+  "description": "Angular component with two svg buttons switching like state",
   "license": "proprietary",
   "dependencies": {
   },
@@ -34,6 +34,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.ftven.net:team-infini/speaker.git"
+    "url": "git@gitlab.ftven.net:team-infini/likebox.git"
   }
 }
