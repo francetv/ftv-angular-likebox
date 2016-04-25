@@ -1,16 +1,18 @@
-<div class="likeBox" >
+<div class="likeBox" ng-class="{ 'likeBox--disabled': isControlsDisabled() }">
     <button class="likeBox__like likeBox__button"
             ng-click="like()"
-            ng-class="{ 'likeBox__button--active': isLiked()}">
+            ng-disabled="isControlsDisabled()"
+            ng-class="{ 'likeBox__button--active': isLiked(), 'likeBox__button--disabled': isControlsDisabled()}">
         <div ng-include="'/likeBox/like.svg.html'"></div>
     </button>
     <button class="likeBox__dislike likeBox__button"
             ng-click="dislike()"
-            ng-class="{ 'likeBox__button--active': isDisliked()}"
+            ng-disabled="isControlsDisabled()"
+            ng-class="{ 'likeBox__button--active': isDisliked(), 'likeBox__button--disabled': isControlsDisabled()}"
             >
         <div ng-include="'/likeBox/dislike.svg.html'"></div>
     </button>
-    <span class="likeBox__text">
+    <span class="likeBox__text" ng-class="{ 'likeBox__text--disabled': isControlsDisabled() }">
         Do you like ?
     </span>
 </div>

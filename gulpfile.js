@@ -13,6 +13,7 @@ var sass = require('gulp-sass');
 var compass = require('gulp-compass');
 var scsslint = require('gulp-scss-lint');
 var csslint = require('gulp-csslint');
+var karma = require('karma').server;
 
 var repoRootKarma =  __dirname + '/../';
 
@@ -172,4 +173,12 @@ gulp.task('css-lint', function() {
             'zero-units': false
         }))
         .pipe(scsslint());
+});
+
+// Karma //
+gulp.task('karma-test', function (callback) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, callback);
 });

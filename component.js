@@ -1,9 +1,13 @@
 angular.module('ftv.component.likeBox', ['ftv.components.likeBox.templates'])
-    .directive('likeBox', ['$rootScope', function ($rootScope) {
+    .directive('ftvLikeBox', ['$rootScope', function ($rootScope) {
         return {
             restrict: 'E',
             replace: true, // can be at replace true because it is in the view and like can be available during app loading
             templateUrl: '/likeBox/index.html',
+            scope: {
+                isDisabled: '=',
+                context: '='
+            },
             link: function($scope) {
                 $scope.context = {
                     isLiked: false,
@@ -32,6 +36,10 @@ angular.module('ftv.component.likeBox', ['ftv.components.likeBox.templates'])
                     $scope.context.isLiked = isLiked;
 
                     $rootScope.$emit('ftv-likebox-update', $scope.context);
+                };
+
+                $scope.isControlsDisabled = function () {
+                    return $scope.isDisabled;
                 };
             }
         };
