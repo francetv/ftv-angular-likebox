@@ -1,8 +1,29 @@
 {
   "name": "ftv-angular-likebox",
+  "description": "Likebox with like and dislike icon",
+  "main": [
+    "dist/js/ftv.component.likebox.js",
+    "component.scss"
+  ],
   "dependencies": {
     "jquery": "2.2.0",
-    "angular": "angularjs#1.5.2",
+    "angular": "angularjs#1.5.2"
+  },
+  "devDependencies": {
     "angular-mocks": "1.5.2"
-  }
+  },
+  "ignore": [
+    "**/.*",
+    ".jshintrc",
+    "tests",
+    "demo",
+    ".gitignore",
+    "demo.html",
+    "component.js",
+    "gulpfile.js",
+    "karma.conf.js"
+  ],
+  "keywords": [
+    "likebox"
+  ]
 }
